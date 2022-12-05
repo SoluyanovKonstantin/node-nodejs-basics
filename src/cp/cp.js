@@ -1,5 +1,7 @@
+import child_process from 'child_process';
+
 const spawnChildProcess = async (args) => {
-    // Write your code here
+    child_process.fork('files/script.js', args)
 };
 
-spawnChildProcess();
+spawnChildProcess(['--harmony', 'ddd']);
